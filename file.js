@@ -114,6 +114,7 @@ var pool = ['plea', 'duck', 'plek', 'plck', 'puck', 'duck', 'glea', 'goea', 'gob
 
 var i = pool.length;
 
+// shuffle words
 while (i--){
   var temp = pool[i];
   var randIndex = Math.floor(Math.random() * (i+1));
@@ -121,12 +122,12 @@ while (i--){
   pool[randIndex] = temp;
 }
 
+// add all words to graph
 var insertWords = function(pool) {
   for (var i = 0; i < pool.length; i++) {
     work.addVertex(pool[i]);
   }
 }
-
 insertWords(pool);
 
 var compareWords =  function(word1, word2) {
@@ -146,9 +147,9 @@ var compareWords =  function(word1, word2) {
   }
   
   return true;
-  
 }
 
+// create edges between specific words
 work.createEdgeIf(compareWords);
 
 console.log(work);
