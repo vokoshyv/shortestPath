@@ -106,9 +106,10 @@ Graph.prototype.createEdgeIf = function(callback){
 }
 
 
-
+// create new graph
 var work = new Graph();
 
+// words
 var pool = ['plea', 'duck', 'plek', 'plck', 'puck', 'duck', 'glea', 'goea', 'goba', 'doba', 'duba', 'duca', 'pleb', 'paek', 'pack'];
 
 var i = pool.length;
